@@ -1,0 +1,9 @@
+project: savantenvs/httrack
+target: fuzz-unescape
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-unescape/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-unescape
+    libfuzzer: true
+    timeout: 25

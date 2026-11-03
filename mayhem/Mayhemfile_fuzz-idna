@@ -1,0 +1,9 @@
+project: savantenvs/httrack
+target: fuzz-idna
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-idna/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-idna
+    libfuzzer: true
+    timeout: 25

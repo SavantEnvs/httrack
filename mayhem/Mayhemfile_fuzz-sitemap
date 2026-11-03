@@ -1,0 +1,9 @@
+project: savantenvs/httrack
+target: fuzz-sitemap
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-sitemap/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-sitemap
+    libfuzzer: true
+    timeout: 25

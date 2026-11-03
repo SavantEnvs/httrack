@@ -1,0 +1,9 @@
+project: savantenvs/httrack
+target: fuzz-meta
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-meta/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-meta
+    libfuzzer: true
+    timeout: 25

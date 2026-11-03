@@ -1,0 +1,9 @@
+project: savantenvs/httrack
+target: fuzz-charset
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-charset/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-charset
+    libfuzzer: true
+    timeout: 25
